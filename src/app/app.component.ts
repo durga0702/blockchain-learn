@@ -103,11 +103,8 @@ export class AppComponent implements OnInit {
    */
   networkChangeListener() {
     this.ethereum.on('chainChanged', (chain) => {
-      setTimeout(() => {
-        this.changedChainId = chain;
-        console.log("check", this.changedChainId)
-        //this.netWork(chain);
-      }, 1000);
+      this.changedChainId = chain;
+      console.log("check", this.changedChainId)
     });
   }
 
