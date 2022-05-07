@@ -1,18 +1,20 @@
 <h3 *ngIf="walletAddress">Wallet Address: {{walletAddress}}</h3>
+
 <h3 *ngIf="chainNetwork">Network: {{chainNetwork}}</h3>
+
 <button *ngIf="!walletAddress" (click)="connectWallet()">connect</button><br><br><br>
-<button  (click)="getChainId()">Get Network</button><br><br><br> 
+
+<button (click)="getChainId()">Get Network</button><br><br><br>
 
 <select (change)="changeNetworkId($event)">
-  <option >Choose Network</option>
+  <option>Choose Network</option>
   <option value="0x1">Ethereum Main Network (Mainnet)</option>
   <option value="0x3">Ropsten Test Network</option>
   <option value="0x4">Rinkeby Test Network</option>
   <option value="0x5">Goerli Test Network</option>
   <option value="0x2a">Kovan Test Network</option>
- </select> <br><br>
+</select> <br><br>
 
- <h3>Changed network: {{changedChainId}}</h3>
+<h3>Changed network: {{changedChainId}}</h3>
 
-
- <button (click)="addNewNetWork()">Add New Network</button><br><br>
+<button (click)="addNewNetWork()">Add New Network</button><br><br>
